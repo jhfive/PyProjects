@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <ul>
+        <li>title | name | date </li>
+        {% for dto in v_dtoList %}
+            <li>
+                <a href="/view/{{ dto.id }}">{{ dto.title }}</a> | {{ dto.name }} | {{ dto.cdate|date:"D d M Y" }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
