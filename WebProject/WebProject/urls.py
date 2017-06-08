@@ -19,6 +19,7 @@ from Community.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', f_list),
     url(r'^write/', f_write, name='n_write'),
     url(r'^list/', f_list, name='n_list'),
     url(r'^view/(?P<num>[0-9]+)/$', f_view),

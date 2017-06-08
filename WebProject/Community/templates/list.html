@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>List</title>
 </head>
-<body>
-    <ul>
-        <li>title | name | date </li>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>title | name | date</h1>
+        </div>
         {% for dto in v_dtoList %}
-            <li>
+            <div class="col-sm-12">
                 <a href="/view/{{ dto.id }}">{{ dto.title }}</a> | {{ dto.name }} | {{ dto.cdate|date:"D d M Y" }}
-            </li>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
+</div>
 </body>
 </html>
